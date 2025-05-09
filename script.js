@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         .then(() => {
                             // Successfully playing
                             audio.muted = false;
-                            playButton.innerHTML = '<i class="fas fa-pause"></i> Pause Wedding Music';
+                            playButton.innerHTML = '<i class="fas fa-pause"></i> Pause Music';
                             console.log('Audio is now playing');
                         })
                         .catch((error) => {
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             } else {
                 audio.pause();
-                playButton.innerHTML = '<i class="fas fa-play"></i> Play Wedding Music';
+                playButton.innerHTML = '<i class="fas fa-play"></i> Play Music';
                 console.log('Audio is now paused');
             }
         });
