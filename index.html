@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarah & Michael - Wedding Invitation</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Audio Player -->
+    <div class="audio-player">
+        <audio id="background-music" preload="auto">
+            <source src="assets/Wedding Music.mp3" type="audio/mpeg">
+            <source src="assets/Wedding Music.ogg" type="audio/ogg">
+            Your browser does not support the audio element.
+        </audio>
+        <button id="play-music" class="music-control">
+            <i class="fas fa-play"></i> Play Wedding Music
+        </button>
+    </div>
+    
+    <!-- Header Section -->
+    <header id="home">
+        <div class="container">
+            <h3 class="getting-married">WE ARE GETTING MARRIED</h3>
+            <h1 class="names">Sarah & Michael</h1>
+            <p class="invitation-text">Request the pleasure of your company as we celebrate our wedding</p>
+            <p class="date-time">SATURDAY, JUNE 15, 2024</p>
+            <p class="date-time">AT FOUR O'CLOCK IN THE AFTERNOON</p>
+            <p class="venue">ROSEWOOD GARDEN ESTATE</p>
+            <a href="#rsvp" class="btn">RSVP</a>
+        </div>
+        <a href="#our-story" class="down-arrow">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </header>
+
+    <!-- Our Story Section -->
+    <section id="our-story" class="our-story">
+        <div class="container">
+            <h2 class="section-title">Our Story</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">How We Met</h3>
+                        <p>We first crossed paths at a mutual friend's birthday party in the summer of 2019. Michael spilled his drink on Sarah's favorite shoes, and somehow that led to exchanging numbers.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">First Date</h3>
+                        <p>Our first date was at a small Italian restaurant downtown. We talked for hours and closed the place down. We both knew something special was happening.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">The Proposal</h3>
+                        <p>After two wonderful years together, Michael proposed during a sunset hike to our favorite overlook. With the mountains in the background and a perfect ring, Sarah said yes!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Details Section -->
+    <section id="details" class="event-details">
+        <div class="container">
+            <h2 class="section-title">Event Details</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-flag"></i>
+                    </div>
+                    <h3 class="card-title">Ceremony</h3>
+                    <p>Saturday, June 15, 2024</p>
+                    <p>4:00 PM</p>
+                    <br>
+                    <p>Rosewood Garden Estate</p>
+                    <p>123 Blossom Lane</p>
+                    <p>Meadowville, CA 90210</p>
+                    <br>
+                    <p><em>Outdoor ceremony in the rose garden</em></p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-birthday-cake"></i>
+                    </div>
+                    <h3 class="card-title">Reception</h3>
+                    <p>Saturday, June 15, 2024</p>
+                    <p>6:00 PM</p>
+                    <br>
+                    <p>Rosewood Garden Estate</p>
+                    <p>Grand Ballroom</p>
+                    <br>
+                    <p><em>Cocktail hour, dinner & dancing</em></p>
+                </div>
+            </div>
+
+            <div class="accommodations">
+                <h3>Accommodations</h3>
+                <p>We've reserved a block of rooms at the Meadowville Grand Hotel. Please mention the "Smith-Johnson Wedding" when booking to receive our special rate.</p>
+
+                <div class="hotel-card">
+                    <h4 class="hotel-name">Meadowville Grand Hotel</h4>
+                    <p>456 Main Street</p>
+                    <p>Meadowville, CA 90210</p>
+                    <p>(555) 123-4567</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Our Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section id="rsvp" class="rsvp">
+        <div class="container">
+            <h2 class="section-title">RSVP</h2>
+            <p class="rsvp-deadline">Please respond by May 15, 2024</p>
+            <form id="rsvp-form" class="rsvp-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" name="firstName" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" name="lastName" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label>Will you be attending?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="attending-yes" name="attending" value="Joyfully Accept" required>
+                            <label for="attending-yes">Joyfully Accept</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="attending-no" name="attending" value="Regretfully Decline">
+                            <label for="attending-no">Regretfully Decline</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Number of Guests (Including Yourself)</label>
+                    <select id="guests" name="guests" class="form-control" required>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="dietary">Dietary Restrictions</label>
+                    <textarea id="dietary" name="dietary" class="form-control"></textarea>
+                </div>
+                <button type="submit" class="btn">Submit RSVP</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Sarah & Michael Wedding</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
