@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const setupRsvpForm = () => {
         const form = document.getElementById('rsvp-form');
         // Replace with your actual Google Apps Script URL
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzm9u8l3Z7mG0GPvM0Gu-5HQhOgh-ZBRGLGtN8fsUbwunBKnOuWdTbFSL3TP_MnecTlVg/exec';
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyZmXQF4UqkBorUKhLlG_kUyH-z8gw3jJKg6uX7xGkHcfnxkD52twiqBtm0mRAiwF7xSQ/exec';
         
         if (form) {
             form.addEventListener('submit', e => {
