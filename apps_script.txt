@@ -1,46 +1,41 @@
-const sheetName = 'Sheet1';  // Change to your sheet name if different
-const scriptProp = PropertiesService.getScriptProperties();
-
-function setup() {
-  const activeSpreadsheet = SpreadsheetApp.getActiveSpreadsheet();
-  scriptProp.setProperty('key', activeSpreadsheet.getId());
-}
-
 function doPost(e) {
-  const lock = LockService.getScriptLock();
-  lock.tryLock(10000);
-  
   try {
-    const doc = SpreadsheetApp.openById(scriptProp.getProperty('key'));
-    const sheet = doc.getSheetByName(sheetName);
+    // Get the active spreadsheet and the first sheet
+    const spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
+    const sheet = spreadsheet.getSheets()[0];
     
-    const headers = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0];
-    const nextRow = sheet.getLastRow() + 1;
+    // Parse the form data
+    const formData = e.parameter;
     
-    const newRow = headers.map(function(header) {
-      return header === 'Timestamp' ? new Date() : e.parameter[header.toLowerCase().replace(/\s/g, '')];
-    });
+    // Prepare the data row with form values
+    const newRow = [
+      formData.firstName,
+      formData.lastName,
+      formData.email,
+      formData.attending,
+      formData.guests,
+      formData.dietary,
+      new Date() // Timestamp
+    ];
     
-    sheet.getRange(nextRow, 1, 1, newRow.length).setValues([newRow]);
+    // Append the data as a new row
+    sheet.appendRow(newRow);
     
+    // Return success response
     return ContentService
-      .createTextOutput(JSON.stringify({ 'result': 'success', 'row': nextRow }))
-      .setMimeType(ContentService.MimeType.JSON);
-  }
-  
-  catch (e) {
+      .createTextOutput(JSON.stringify({ 'result': 'success' }))
+      .setMimeType(ContentService.MimeType.JSON)
+      .addHeader('Access-Control-Allow-Origin', '*');
+      
+  } catch (error) {
+    // Return error response
     return ContentService
-      .createTextOutput(JSON.stringify({ 'result': 'error', 'error': e }))
-      .setMimeType(ContentService.MimeType.JSON);
-  }
-  
-  finally {
-    lock.releaseLock();
+      .createTextOutput(JSON.stringify({ 'result': 'error', 'error': error.toString() }))
+      .setMimeType(ContentService.MimeType.JSON)
+      .addHeader('Access-Control-Allow-Origin', '*');
   }
 }
 
-function doGet() {
-  return HtmlService.createHtmlOutput('The web app is working but needs a POST request with form data');
+function doGet(e) {
+  return HtmlService.createHtmlOutput("The script is deployed and ready to receive form submissions.");
 }
-
-https://cikgu-kacchan.my.canva.site/dagksts3l9a
